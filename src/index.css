@@ -1,0 +1,146 @@
+/* Import Syncfusion Material theme */
+@import url('https://cdn.syncfusion.com/ej2/material.css');
+
+/* Custom font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+/* Import Tailwind v4 */
+@import "tailwindcss";
+
+/* Define the dark variant to work with a class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* === Base styles === */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/* === Theme Variables === */
+@theme {
+  /* Fonts */
+  --font-display: "Open Sans", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+
+  /* Sizes */
+  --size-400: 400px;
+  --size-760: 760px;
+  --size-780: 780px;
+  --size-800: 800px;
+  --size-1000: 1000px;
+  --size-1200: 1200px;
+  --size-1400: 1400px;
+  --size-80: 80px;
+
+  /* Border */
+  --border-1: 1px;
+}
+
+/* CSS Custom Properties for light/dark mode switching */
+:root {
+  --color-main-bg: #FAFBFB;
+  --color-main-dark-bg: #20232A;
+  --color-secondary-dark-bg: #33373E;
+  --color-light-gray: #F7F7F7;
+  --color-half-transparent: rgba(0, 0, 0, 0.5);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --background-image-hero-pattern: url('/welcome-bg.svg');
+}
+
+.dark {
+  --color-main-bg: #20232A;
+  --color-light-gray: #33373E;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom utility classes */
+.bg-main-bg {
+  background-color: var(--color-main-bg);
+}
+
+.bg-main-dark-bg {
+  background-color: var(--color-main-dark-bg);
+}
+
+.bg-secondary-dark-bg {
+  background-color: var(--color-secondary-dark-bg);
+}
+
+.bg-light-gray {
+  background-color: var(--color-light-gray);
+}
+
+.bg-half-transparent {
+  background-color: var(--color-half-transparent);
+}
+
+.border-color {
+  border-color: var(--border-color);
+}
+
+.bg-hero-pattern {
+  background-image: var(--background-image-hero-pattern);
+}
+
+.w-400 {
+  width: var(--size-400);
+}
+
+.sidebar {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+}
+
+.nav-item {
+  z-index: 10000;
+}
+
+@media (width <= 800px) {
+  .sidebar {
+    z-index: 10000000;
+  }
+}
+
+/* Syncfusion dialog z-index fixes */
+.e-dlg-center-center,
+.e-quick-popup-wrapper.e-device {
+  z-index: 1000000 !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(216, 216, 216);
+  border-radius: 40px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Color Picker Preview Box */
+#preview {
+  background: transparent
+    url('https://ej2.syncfusion.com/react/demos/src/color-picker/images/pen.png')
+    no-repeat;
+  display: inline-block;
+  height: 80px;
+  margin: 10px 0;
+  min-width: 300px;
+  max-width: 600px;
+  background-color: #008000;
+}
+
+/* Remove input borders */
+.e-input-group:not(.e-float-icon-left),
+.e-input-group.e-success:not(.e-float-icon-left),
+.e-input-group.e-warning:not(.e-float-icon-left),
+.e-input-group.e-error:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-success:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-warning:not(.e-float-icon-left),
+.e-input-group.e-control-wrapper.e-error:not(.e-float-icon-left) {
+  border: none;
+}
