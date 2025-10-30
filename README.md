@@ -14,7 +14,8 @@ A modern, responsive React admin dashboard built with Syncfusion UI components. 
 
 ## Demo
 
-image.png
+<img width="1424" height="304" alt="image" src="https://github.com/user-attachments/assets/a9d8bec6-022a-4ee4-80f9-e56d2026b4a0" />
+
 ## Getting Started
 
 ### Prerequisites
