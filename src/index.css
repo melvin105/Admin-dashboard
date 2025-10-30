@@ -9,7 +9,6 @@
 
 /* Define the dark variant to work with a class */
 @custom-variant dark (&:where(.dark, .dark *));
-
 /* === Base styles === */
 body {
   margin: 0;
@@ -67,6 +66,7 @@ body {
 .bg-secondary-dark-bg {
   background-color: var(--color-secondary-dark-bg);
 }
+
 
 .bg-light-gray {
   background-color: var(--color-light-gray);
