@@ -7,10 +7,11 @@ const Stacked = () => {
   return (
     <div className='m-4 md:m-10 mt-24 p-10 bg-white dark:bg-gray-800 rounded-3xl'>
       <Header category="Chart" title="Revenue Breakdown" />
-      <div className="w-full">
+      <div className="w-full overflow-x-auto">
         <ChartComponent
           id="stacked-chart"
-          height="420px"
+          width="100%"
+          height="360px"
           primaryXAxis={stackedPrimaryXAxis}
           primaryYAxis={stackedPrimaryYAxis}
           chartArea={{ border: { width: 0 } }}

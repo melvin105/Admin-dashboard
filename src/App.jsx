@@ -38,12 +38,8 @@ const App = () => {
           </TooltipComponent>
         </div>
 
-        {activeMenu ? (
-          <div className="w-72 fixed sidebar dark:bg-gray-800 bg-white">
-            <Sidebar />
-          </div>
-        ) : (
-          <div className="w-0 dark:bg-gray-800 bg-white">
+        {activeMenu && (
+          <div className="fixed sidebar dark:bg-gray-800 bg-white w-64 md:w-72 max-w-[80vw]">
             <Sidebar />
           </div>
         )}

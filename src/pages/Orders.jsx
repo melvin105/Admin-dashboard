@@ -7,17 +7,21 @@ import { Header } from '../components';
 const Orders = () => {
   const editing = { allowDeleting: true, allowEditing: true };
   return (
-    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white rounded-3xl">
+    <div className="m-2 md:m-10 mt-24 p-2 md:p-10 bg-white dark:bg-gray-800 dark:text-gray-200 rounded-3xl">
       <Header category="Page" title="Orders" />
+      <div className="w-full overflow-x-auto">
       <GridComponent
         id="gridcomp"
         dataSource={ordersData}
         allowPaging
         allowSorting
+        allowResizing
+        allowTextWrap
         allowExcelExport
         allowPdfExport
         contextMenuItems={contextMenuItems}
         editSettings={editing}
+        width="auto"
       >
         <ColumnsDirective>
           {/* eslint-disable-next-line react/jsx-props-no-spreading */}
@@ -25,6 +29,7 @@ const Orders = () => {
         </ColumnsDirective>
         <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport]} />
       </GridComponent>
+      </div>
     </div>
   );
 };
